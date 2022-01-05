@@ -12,9 +12,9 @@ body{
         background-color: white;
         border-radius: 10px; /*Bordas  */
         padding: 100px; /* Altura*/
-        width: 600px;
+        width: 500px;
         margin: auto;
-        box-shadow: 5px 5px 10px rgb(243, 243, 243);
+        box-shadow: 5px 5px 10px rgb(169, 166, 166);
     }
     footer{
         color: white;
