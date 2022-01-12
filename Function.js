@@ -204,8 +204,9 @@ function distance(x1, y1, x2, y2) {
     var personagemParams = ['Começando', 321, [1,2,3]]
     personal.apply(personthis,personagemParams);
 
-    //BIND BIND BIND
     
+    //BIND BIND BIND
+    // o principal objetivo de bind() é vincular uma função a um objeto
     // o metodo bind não invoca o funtcion direitamente, passas o this os parametros e retorna a funtcion novamente, podndo assim ivocar a funtcion
 
     personal.bind(personthis,'Ola ', 'Mundo', '!!!')

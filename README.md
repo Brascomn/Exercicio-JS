@@ -30,3 +30,5 @@ Olá! Neste repositorio estão codificados os exemplos de execicios do curso de 
 * Armazenar valores de chave em uma variavel
 * Propriedade (key e values)
 * Prevenção
+
+# Escopo e Let
