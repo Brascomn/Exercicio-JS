@@ -13,6 +13,11 @@ Olá! Neste repositorio estão codificados os exemplos de execicios do curso de 
 * Variavel que recebem funções
 * Funções anonimas
 * Funções CallBack
+* THIS
+* * Call
+* * APlly
+* * Bind
+* * Arrow Funtcion
 
 ---
 
