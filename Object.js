@@ -158,3 +158,120 @@ var objecto = {
     
                 nave.atual = 2;
                 console.log(nave.atual);
+    
+        // Armazenar valores de chave em uma variavel
+            var armazenar ={
+                nome : 'Brascomn',
+                idade : 25 ,
+                pais:'Angola'
+            };
+    
+            // Forma tradicional
+    
+            var nomes = armazenar.nome;
+            var idades = armazenar.idade;
+            console.log(nomes)
+            console.log(idades)
+            
+            // Nova Forma 
+            var {idade} = armazenar;
+            console.log(idade);
+            var {idade, pais, nome} = armazenar;
+            console.log(nome ,idade, pais);
+            // A conteudo da chave nome será armazenada na variável primeiroNome
+            var {nome:primeiroNome} = armazenar;
+            console.log(primeiroNome);
+            
+            // Obejctos dentro de objectos
+            var novoarmaz = {
+                Apelido: {
+                    firstname:'Valdir',
+                    lastname:'Chimuanga'
+                }
+            };
+    
+            // Forma Tradicional
+            var first = novoarmaz.Apelido.firstname;
+            console.log(first);
+            
+            //Nova Forma
+            var { Apelido: { firstname }} = novoarmaz;
+            // ela não consegue pela apartir de apelido, apenas com firstname
+            // console.log(Apelido); 
+            console.log(firstname); 
+            
+            // Passando para variável nm
+            var { Apelido: { firstname:nm }} = novoarmaz;
+            console.log(nm); 
+    
+    
+            // Funcão recebendo objecto
+            
+            function imprimirUsuario(usuario) {
+                console.log(usuario.nome);
+                console.log(usuario.idade);
+                console.log(usuario.sexo);
+            };
+    
+            var usuarioFunction = {
+                nome:'Bráulio Valdir',
+                idade:27,
+                sexo:'M'
+            }
+            imprimirUsuario(usuarioFunction);
+    
+            // Extraindo de maneira especifica {nome, idade, sexo}
+    
+            function imprimirUsuario2({nome, idade, sexo, pais='Angola'}) {
+                // O valor de angola é padrão pos não foi passado como permanente,
+                //  sendo que para isso teriamos que passar no objecto
+                console.log(nome);
+                console.log(idade);
+                console.log(sexo);
+                console.log(pais);
+                
+            };
+            imprimirUsuario2(usuarioFunction);
+    
+            // Object.keys mostras as chaves do object
+            console.log(Object.keys(usuarioFunction));
+            // Obejct.values mostra os valores do obejct
+            console.log(Object.values(usuarioFunction));
+    
+            var props = Object.keys(usuarioFunction);
+            for (let i = 0; i < props.length; i++) {
+                console.log( props[i]);
+    
+                // pegando a propriedade de objecto
+                // Forma estatica
+                console.log(usuarioFunction.nome);
+                console.log(usuarioFunction.idade);
+                console.log(usuarioFunction.sexo);
+                
+                // Forma Dinamica
+                console.log(usuarioFunction[props[i]]);
+            };
+    
+            // Modo de intereção mais simples
+            for (var prop of props) {
+                // passagem de parametro direito
+                console.log(usuarioFunction[prop])
+            }
+    
+            // for in em vez de usar um array, usamoos um objecto
+            for (var prop2 in usuarioFunction) {
+                // Ele retorna a propriedade ou chave
+                console.log(prop2);
+                //Pegando o valor
+                console.log(usuarioFunction[prop2]);
+                // Retornando os 2
+                console.log(prop2, usuarioFunction[prop2]);
+            }
+            // Prevenção para que não pega valores que nao colocas,
+            // mas que foram herdados de bibliotecas entre outros ou algum lugar
+    
+            for (var prop2 in usuarioFunction) {
+               if (usuarioFunction.hasOwnProperty(prop2)) {
+                   console.log(prop2, usuarioFunction[prop2]);
+               }
+            }
