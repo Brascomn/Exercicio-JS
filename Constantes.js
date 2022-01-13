@@ -32,3 +32,14 @@ console.log(competencia);
 competencia[1]='Sass'
 console.log(competencia);
 
+const usuario = {
+    nome:'Braulio',
+    idade: 25
+};
+console.log(usuario);
+
+usuario.idade=45;
+usuario.cidade = 'Rio de Janeiro' //Adicionando campo
+
+console.log(usuario)
+
