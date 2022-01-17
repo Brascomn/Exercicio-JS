@@ -32,3 +32,4 @@ Olá! Neste repositorio estão codificados os exemplos de execicios do curso de 
 * Prevenção
 
 # Escopo, let, const, hosting
+# Map, Filter, Reduce
